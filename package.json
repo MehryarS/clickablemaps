@@ -1,0 +1,31 @@
+{
+  "name": "clickablemaps",
+  "version": "1.0.0",
+  "description": "Make your maps clickable.",
+  "main": "index.js",
+  "author": "MEHRYĀR.S <me@mehryars.com> (http://www.mehryars.com)",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MehryarS/clickablemaps.git"
+  },
+  "bugs": {
+    "url": "https://github.com/MehryarS/clickablemaps/issues"
+  },
+  "homepage": "https://github.com/MehryarS/clickablemaps",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-minifier": "^1.2.2",
+    "gulp-ruby-sass": "^3.0.0",
+    "gulp-sourcemaps": "^2.6.4",
+    "gulp-uglify": "^3.0.0"
+  },
+  "dependencies": {
+    "gulp-concat": "^2.6.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "gulp build",
+    "start": "gulp"
+  }
+}
