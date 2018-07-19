@@ -19,7 +19,7 @@ gulp.task('sass', () =>
 );
 
 //CSS and JS minifier
-gulp.task('minify', function() {
+gulp.task('minify', () => {
     return gulp.src('./src/**/*')
     .pipe(minify({
         minify: true,

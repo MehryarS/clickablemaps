@@ -1,0 +1,219 @@
+/*
+ * RESET CSS
+ * ============================= */
+ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed,  figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+body {
+	line-height: 1;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+blockquote, q {
+	quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+
+
+/*
+ * GENERAL PAGE CSS
+ * ============================= */
+
+ *{
+    font-family: Tahoma;
+    letter-spacing: -.25px;
+ }
+
+ ul li{
+    font-family: Tahoma;
+    letter-spacing: -.25px;
+ }
+
+ h1, h2, h3, h4, h5, h6{
+    font-family: Tahoma;
+    font-weight: bold;
+    letter-spacing: -1px;
+ }
+
+.wrapper{
+    width: 100%;
+    max-width: 1200px;
+    position: relative;
+    margin: 0 auto;
+}
+
+
+
+
+/*
+ * Grid System
+ * ============================= */
+.container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 100%;
+    width: 100%;
+    margin: 2em auto;
+    max-width: 1200px;
+    align-items: top;
+
+    & > div{
+        padding: 0 1em;
+    }
+}
+
+
+
+
+/*
+ * Cities Information
+ * ============================= */
+h2{
+    margin-bottom: 1em;
+    font-size: 1.5em;
+}
+
+.block{
+    display: grid;
+    align-items: center;
+    grid-template-columns: 200px 1fr;
+    background: #FFFFFF;
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.1);
+    -ms-box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.1);
+    padding: 1.5em;
+    margin-bottom: 2em;
+}
+
+.block__image__wrapp{
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 5px;
+
+    img{
+        width: 100%;
+        height: auto;
+    }
+}
+
+.block__information__wrapp{
+    padding: 0 .5em;
+
+    ul{
+
+        li{
+            margin-bottom: .5em;
+        }
+    }
+}
+
+.block__information__title{
+    color: #a3834b;
+    font-size: 1em;
+}
+
+.block__information__manager{
+    margin-bottom: 1.5em;
+}
+
+.block__information__address, .block__information__email, .block__information__phone{
+    font-size: .9em;
+    opacity: .5;
+}
+
+ul.agents__zone__list{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+
+
+
+/*
+ * Tooltip
+ * ============================= */
+.tooltip__wrapper{
+    display: none;
+}
+
+.tooltip__text {
+    background-color: #FFFFFF;
+    color: rgba(0, 0, 0, 0.5);
+    padding: 10px 15px !important;
+    border-radius: 5px;
+    position: absolute;
+    z-index: 1;
+    display: inline-block;
+    font-size: .7em;
+    font-family: Tahoma;
+    -webkit-box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.1);
+    -ms-box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.1);
+    border: 3px solid rgba(163, 131, 75, 0.3);
+}
+
+
+
+
+/*
+ * SVG MAP
+ * ============================= */
+svg a{
+    position: relative;
+}
+
+.cities{
+    fill: transparent;
+    stroke: #a3834b;
+    cursor: pointer;
+    -webkit-transition: all .15s linear;
+    -moz-transition: all .15s linear;
+    transition: all .15s linear;
+
+    &:hover{
+        fill: #a3834b;
+    }
+
+    &.this{
+        fill: #a3834b;
+    }
+}
+
+.active{
+    opacity: 1;
+}
+
+.deactive{
+    fill: rgba(163, 131, 75, 0.3);
+    cursor: not-allowed;
+
+    &.cities:hover{
+        fill: rgba(163, 131, 75, 0.3);
+    }
+}
